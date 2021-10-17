@@ -1,13 +1,13 @@
 <?php
 
-include_once('connexiondao.php');
+include_once('connexionDAO.php');
 include_once('medicament.php');
 
 //récupérer table de tout les médicaments
-class medicamentdao{
+class medicamentDAO{
     
-    public static function getmedicamentdao(){
-        $connect = connexiondao::connexionpdo();
+    public static function getMedicamentDAO(){
+        $connect = connexionDAO::connexionPDO();
         $request = $connect->prepare("select * from medicament");
         $request->execute();
         $ligne=$request->fetchall();

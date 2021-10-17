@@ -3,7 +3,6 @@
 include_once('connexionDAO.php');
 include_once('medecin.php');
 
-//récupérer table de tout les médicaments
 class medecinDAO{
     
     public static function getMedecinDAO(){
@@ -17,4 +16,15 @@ class medecinDAO{
         }
          return $res;
     }
+
+
+    public static function countMedecinDAO(){
+        $connect = connexionDAO::connexionPDO();
+        $count = $connect->prepare("select count(id) as nb from medecin");
+        $count->setFetchMode(PDO::FETCH_ASSOC);
+        $count->execute();
+        $tcount=$count->fetchAll();
+        return $tcount[0]["nb"];
+    }
 }
+

@@ -19,4 +19,5 @@ class rapportDAO{
         }
          return $res;
         }
+
 }
