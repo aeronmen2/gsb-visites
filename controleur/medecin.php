@@ -15,7 +15,7 @@ $nbmedecin = medecinDAO::countMedecinDAO();
 @$page=$_GET["page"];
 $nb_elements_page=9;
 $nb_pages=ceil($nbmedecin/$nb_elements_page);
-echo $nb_pages;
+
 
 if (visiteurDAO::isloggedon()){
     include "$racine/vue/entete.html.php";

@@ -38,7 +38,6 @@ class visiteurDAO{
         }
 
         $visiteur = visiteurDAO::getvisiteurbyloginDAO($login);
-        print_r($visiteur);
         $mdpbd = $visiteur->getmdpvisiteur();
         $loginbd = $visiteur->getloginvisiteur();
 
