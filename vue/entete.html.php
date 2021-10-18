@@ -6,16 +6,19 @@
 	</head>
 
 	<body>
-				<header class="header">
-                        <nav>
+            <section>
+				<div class="container">
+                    <header>
                             <ul>
-                               
                         <?php if(visiteurDAO::isloggedon()){?>
                             <li><a href="" class="cool">Accueil</a></li>
-                         <a href="./?action=deconnexion">se deconnecter</a>
+                            <li><a href="./?action=deconnexion">se deconnecter</a></li>
+                            <li><a href="" class="cool">Accueil</a></li>
+                            <li><a href="" class="cool">Accueil</a></li>
                          <?php } ?>
                             </ul>
-                         </nav>
-                </header>
-		</nav>
+                    </header>
+                        </div>
+            </section>
+
 

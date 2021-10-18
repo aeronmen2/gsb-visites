@@ -1,10 +1,10 @@
 
 
-<img class="wave" src="images/wave.png">
-<div class="container">
+<!-- <img class="wave" src="images/wave.png"> -->
+<!-- <div class="container">
     <div class="img">
     <img class="vague" src="images/illustration/<?php echo rand(1,11)?>.png">
-</div>
+</div> -->
 
 
 <div id="container">
