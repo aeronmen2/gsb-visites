@@ -1,16 +1,12 @@
+<script>
+$(document).ready(function(){
+$('#exemple').DataTable();
+} );
+</script>
 
-<h1>Médecins</h1>
-<?php echo "<p> Il y a ".$nbmedecin. " enregistrements</p>";?>
-<input type="text" name="recherche" id="searchbar" placeholder="Rechercher...">
 
-<div class="pagination">
-        <?php 
-                for($i=1;$i<=$nb_pages;$i++){
-                        echo "<a href='?page=$i'>$i</a>&nbsp";
-                }
-                ?>
- <div class="tableau">
-<table>
+<div class="oui">
+<table id="exemple">
         <thead>
                 <tr>
                         <th>Identifiant</th>
@@ -22,9 +18,8 @@
                         <th>Département</th>
                         <th></th>
                 </tr>
-        </thead>
-
-<?php
+</thead>
+<?php   
 for ($i = 0; $i < count($listemedecin); $i++) { ?>
 <tr>
         <td> <?php echo "<p>".$listemedecin[$i]->getidmedecin()."</p>";?> </td>

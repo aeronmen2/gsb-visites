@@ -24,9 +24,8 @@ if (visiteurDAO::isloggedon()){
     include "$racine/controleur/accueilvisiteur.php";
 }
 else {
-    include "$racine/vue/entete.html.php";
     include "$racine/vue/vueconnexion.html.php";
-    include "$racine/vue/pied.html.php";
+    include "$racine/vue/footer.html.php";
 }
 
 ?>

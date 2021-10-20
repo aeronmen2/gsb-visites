@@ -9,9 +9,8 @@ include_once "$racine/modele/connexionDAO.php";
 
 visiteurDAO::logout();
 
-include "$racine/vue/entete.html.php";
 include "$racine/vue/vueconnexion.html.php";
-include "$racine/vue/pied.html.php";
+include "$racine/vue/footer.html.php";
     
 
 ?>
