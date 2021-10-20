@@ -15,7 +15,7 @@ if(visiteurDAO::isloggedon()){
     // appel du script de vue qui permet de gerer l'affichage des donnees
     include "$racine/vue/entete.html.php";
     include "$racine/vue/vueaccueilvisiteur.html.php";
-    include "$racine/vue/pied.html.php";
+    include "$racine/vue/footer.html.php";
 }
 
 else { 
@@ -23,7 +23,6 @@ else {
     print("Pas connecté");
     include "$racine/vue/entete.html.php";
     include "$racine/vue/vueconnexion.html.php";
-    include "$racine/vue/pied.html.php";
 }
 
 ?>
