@@ -4,14 +4,15 @@ class rapport{
     private $idrapport;
     private $daterapport;
     private $motif;
-    private $bilanreport;
+    private $bilanrapport;
     private $idvisiteur;
     private $idmedecin;
 
-    public function __construct($unidrapport,$undaterapport,$unbilanreport,$unidvisiteur,$unidmedecin) {
+    public function __construct($unidrapport,$undaterapport,$unmotif,$unbilanrapport,$unidvisiteur,$unidmedecin) {
         $this->idrapport=$unidrapport;
+        $this->motif=$unmotif;
         $this->daterapport=$undaterapport;
-        $this->bilanreport=$unbilanreport;
+        $this->bilanrapport=$unbilanrapport;
         $this->idvisiteur=$unidvisiteur;
         $this->idmedecin=$unidmedecin;
     }
@@ -26,9 +27,14 @@ class rapport{
         return $this->daterapport;
     }
 
-    public function getbilanreport()
+    public function getmotifrapport()
     {
-        return $this->bilanreport;
+        return $this->motif;
+    }
+
+    public function getbilanrapport()
+    {
+        return $this->bilanrapport;
     }
 
     public function getidvisiteur()
