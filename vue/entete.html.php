@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>GSB - Gestion des visites</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="./images/logo2.ico">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-        <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+<html lang="fr">
+
+<head>
+    <title>GSB - Gestion des visites</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./images/logo2.ico">
+
+    <script src="https://kit.fontawesome.com/c003989092.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+
 </head>
 
-	<body>
+<body>
+    <section class="bloc">
+        <div class="container">
+            <header>
 
+                <a href="./?action=accueilvisiteur"><img src="./images/logo.png" class="logo"></a>
+                <ul>
+                    <?php if (visiteurDAO::isloggedon()) { ?>
+                        <li><a data-tilt data-tilt-scale="1.112" href="./?action=rapport">Rapports</a></li>
+                        <li><a data-tilt data-tilt-scale="1.112" href="./?action=medecin">Médecins</a></li>
+                        <li><a data-tilt data-tilt-scale="1.112" href="./?action=deconnexion">Déconnexion</a></li>
+                    <?php } ?>
+                </ul>
+            </header>
 
-            <section class="bloc">
-				<div class="container">
-                    <header>
+            <div class="loader-wrapper">
+                <span class="loader"><span class="loader-inner"></span></span>
+            </div>
 
-                    <span data-tilt>
-                    <a href="./?action=connexion" ><img src="./images/logo.png" class="logo" width=150px;></a>
-                    </span>
-                            <ul>
-                        <?php if(visiteurDAO::isloggedon()){?>
-                            <li><a href="" class="cool">Rapports</a></li>
-                            <li><a href="" class="cool">Médecins</a></li>
-                            <li><a href="./?action=deconnexion">Déconnexion</a></li>
-                         <?php } ?>
-                            </ul>
-                    </header>
-                </div>
-
-
+            <script>
+                $(window).on("load", function() {
+                    $(".loader-wrapper").fadeOut("slow");
+                });
+            </script>
