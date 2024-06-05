@@ -1,4 +1,4 @@
-## Project Title: Gestion des Visites (Visit Management)
+## Gestion des Visites (Visit Management)
 
 ### Introduction
 
