@@ -1,6 +1,5 @@
 <?php
 
-ini_set('display_errors', 'on');
 include "getRacine.php";
 include "$racine/controleur/controleurprincipal.php";
 

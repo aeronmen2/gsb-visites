@@ -36,15 +36,18 @@ class visiteurDAO{
         if (!isset($_SESSION)) {
             session_start();
         }
+        $ret = false;
 
         $visiteur = visiteurDAO::getvisiteurbyloginDAO($login);
         $mdpbd = $visiteur->getmdpvisiteur();
         $loginbd = $visiteur->getloginvisiteur();
 
-        if (trim($mdpbd) == trim($mdp)) {
+        if (trim($mdpbd) == trim($mdp) && $login == $loginbd) {
             $_SESSION["login"] = $loginbd;
             $_SESSION["mdp"] = $mdpbd;
+            $ret = true;
         }
+        return $ret;
     }
     
     public static function isloggedon() {

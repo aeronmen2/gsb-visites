@@ -30,7 +30,6 @@ if (isset($_POST["medecin"])){$medecin = $_POST["medecin"];}
 
 $req_createrapport = rapportDAO::createrapport($date, $motif, $bilan, $id, $medecin);
 
-
 $lesRapports = rapportDAO::getRapportsDAO(); 
 $dernierrapport = end($lesRapports); 
 $iddernierrapport = $dernierrapport->getidrapport(); 

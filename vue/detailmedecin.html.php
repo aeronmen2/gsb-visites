@@ -2,7 +2,7 @@
 <?php echo "<form action='./?action=modifmedecin&idmedecin=". $medecin->getidmedecin() . "'method='post' id='formrapport' />" ?>
 
         <h4>Identifiant :</h4>
-        <input type="text" name="id" placeholder="<?php echo ($medecin->getidmedecin()); ?>" />
+        <input type="text" name="id" disabled placeholder="<?php echo ($medecin->getidmedecin()); ?>" />
         <h4>Nom :</h4>
         <input type="text" name="nom" placeholder="<?php echo ($medecin->getnommedecin()); ?>" />
         <h4>Prénom :</h4>

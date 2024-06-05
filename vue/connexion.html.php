@@ -17,7 +17,7 @@
                                 <input type="text" name="login" autofocus placeholder="Identifiant" required /><br />
                                 <a>Mot de passe</a>
                                 <p>
-                                        <input type="password" name="mdp" autofocus placeholder="Mot de passe" required id="myInput" /> <br />
+                                <input type="password" name="mdp" autofocus placeholder="Mot de passe" required id="myInput" /> <br />
                                 </p>
                                 <input type="submit" value="Connexion">
 

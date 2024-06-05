@@ -2,11 +2,12 @@
         $(document).ready(function() {
                 $('#example').DataTable({
                         "lengthChange": false,
-                        language: {         search: "_INPUT_",
-        searchPlaceholder: "Recherche...",
-        "processing": true,
-        "serverSide": true,
-        "deferLoading": 57}
+                        language: {         
+                        search: "_INPUT_",
+                        searchPlaceholder: "Recherche...",
+                        "processing": true,
+                        "serverSide": true,
+                        "deferLoading": 57}
                 });
         });
 </script>
@@ -34,11 +35,11 @@
                                 <td> <?php echo "<p>" . $listemedecin[$i]->getnommedecin() . "<p>"; ?> </td>
                                 <td> <?php echo "<p>" . $listemedecin[$i]->getprenommedecin() . "<p>"; ?> </td>
                                 <td> <?php echo "<p>" . $listemedecin[$i]->getadressemedecin() . "<p>"; ?> </td>
-                                <td> <?php echo "<p>" . $listemedecin[$i]->gettelmedecin() . "<p>"; ?> </td>
+                                <td> <?php echo "<a href='tel:''>" . $listemedecin[$i]->gettelmedecin() . "<p>"; ?>
                                 <td> <?php echo "<p>" . $listemedecin[$i]->getspecialitecomplementaire() . "<p>"; ?> </td>
                                 <td> <?php echo "<p>" . $listemedecin[$i]->getdepartement() . "<p>"; ?> </td>
                                 <td> <?php echo "<a href='./?action=detailmedecin&idmedecin=" . $listemedecin[$i]->getidmedecin() . "'/>" ?><i class="fas fa-edit"></i></a></td>
-                                <td> <?php echo "<a href='./?action=modifmedecin&idmedecin=" . $listemedecin[$i]->getidmedecin() . "'/>" ?><i class="fas fa-list"></i></a></td>
+                                <td> <?php echo "<a href='./?action=rapportmedecin&idmedecin=" . $listemedecin[$i]->getidmedecin() . "'/>" ?><i class="fas fa-list"></i></a></td>
 
                         </tr>
                 <?php } ?>

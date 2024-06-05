@@ -28,6 +28,29 @@ class rapportDAO
     }
 
 
+    public static function getRapportsByIdMedecinDAO($idmedecin)
+    {
+        $resultat = array();
+        try {
+            $connect = connexionDAO::connexionPDO();
+            $request = $connect->prepare('SELECT R.id,date,motif,bilan,idVisiteur,idMedecin FROM rapport R, visiteur V 
+            WHERE R.idMedecin=:idMedecin AND R.idVisiteur=V.id');
+            $request->bindvalue(':idMedecin', $idmedecin, PDO::PARAM_STR);
+            $request->execute();
+            $ligne = $request->fetchall(PDO::FETCH_ASSOC);
+
+            foreach ($ligne as $key => $val) {
+                $rapport = new Rapport($val['id'], $val['date'], $val['motif'], $val['bilan'], $val['idVisiteur'], $val['idMedecin']);
+                $resultat[] = $rapport;
+            }
+        } catch (PDOException $e) {
+            print "Erreur !: " . $e->getMessage();
+            die();
+        }
+        return $resultat;
+    }
+
+
     public static function getRapportsByIdRapportDAO($idvisiteur)
     {
         $resultat = array();

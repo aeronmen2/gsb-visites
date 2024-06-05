@@ -417,6 +417,33 @@ input[type="password"] {
   }
 }
 
+a {
+  text-decoration:none;
+}
+
+#placement{
+  margin-left: 655px;
+  margin-top: 350px;
+  width: 540px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px) opacity(1);
+}
+
+#confirmation{
+  text-align: center;
+  color: rgb(14, 17, 65);white;
+  margin: auto;
+}
+
+#confirmation h2 a{
+  color: rgb(14, 17, 65);
+  text-decoration:underline;
+}
 select {
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
@@ -532,7 +559,7 @@ form i {
 #example {
   border-collapse: collapse;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 10px;  
   margin: auto;
   font-family: Arial, Helvetica, sans-serif;
   width: 90%;
@@ -548,7 +575,7 @@ form i {
   padding-top: 6px;
   padding-bottom: 6px;
   text-align: left;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 
 }
@@ -586,6 +613,9 @@ control {
   cursor: pointer;
 }
 
+table.dataTables{
+  border: rgba(255, 255, 255, 0.9);
+}
 tr.dt-hasChild td.dt-control {
   background: url("https://www.datatables.net/examples/resources/details_close.png")
     no-repeat center center;

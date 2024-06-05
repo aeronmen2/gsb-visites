@@ -11,11 +11,13 @@ include_once "$racine/modele/rapport.php";
 include_once "$racine/modele/medecinDAO.php";
 include_once "$racine/modele/medecin.php";
 
+            //rvérifier si l'utilisateur est bien connécté
+
 if(visiteurDAO::isloggedon()){
+
 
     $visiteur = visiteurDAO::getvisiteurbyloginDAO($_SESSION['login']);
     $medecin5 = medecinDAO::get5MedecinDAO();
-    
 
     $loginVisiteur = $_SESSION['login'];
     $VisiteurRapport=visiteurDAO::getvisiteurbyloginDAO($loginVisiteur);
@@ -29,5 +31,5 @@ if(visiteurDAO::isloggedon()){
 
 else {
     
-    include "$racine/vue/vueconnexion.html.php";
+    include "$racine/vue/connexion.html.php";
 }
