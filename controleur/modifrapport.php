@@ -40,6 +40,6 @@ $req = rapportDAO::updaterapport($id, $motif, $bilan);
 if ($req == true) {
 
     include "$racine/vue/entete.html.php";
-    include "$racine/vue/confirmationrapport.html.php";
+    include "$racine/vue/confirmationmodifrapport.html.php";
 }
 

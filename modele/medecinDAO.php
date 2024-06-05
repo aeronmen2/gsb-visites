@@ -5,6 +5,8 @@ include_once('medecin.php');
 
 class medecinDAO{
     
+
+            //récupérer les médecins
     public static function getMedecinDAO(){
         $connect = connexionDAO::connexionPDO();
         $request = $connect->prepare("select * from medecin");
@@ -17,6 +19,7 @@ class medecinDAO{
          return $res;
     }
 
+            //récupérer les médecins par ordre alphabétique
     public static function getMedecinAscDAO(){
         $connect = connexionDAO::connexionPDO();
         $request = $connect->prepare("select * from medecin order by nom ASC");
@@ -29,6 +32,7 @@ class medecinDAO{
          return $res;
     }
 
+            //récupérer 5 médecins
     public static function get5MedecinDAO(){
         $connect = connexionDAO::connexionPDO();
         $request = $connect->prepare("select * from medecin limit 5");
@@ -51,6 +55,7 @@ class medecinDAO{
         return $tcount[0]["nb"];
     }
 
+            //récupérer médecins avec son id
     static public function get_medecinById($unIdMedecin){
         $Medecin = null;
         try {
@@ -71,6 +76,7 @@ class medecinDAO{
         return $Medecin;
     }
 
+            //modifier un médecin
     static public function update_MedecinById($id,$nom,$prenom,$adresse,$tel,$specialite,$departement){
 
         $check = false;

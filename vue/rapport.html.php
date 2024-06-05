@@ -34,12 +34,13 @@
             <?php
             for ($i = 0; $i < 5; $i++) { ?>
                 <div class="boxe">
+				<?php $medecin1 = medecinDAO::get_medecinById($vosdernierrapport[$i]->getidmedecin()); ?>
                     <?php echo "<h1 id='id'>" . $vosdernierrapport[$i]->getidrapport() . "</h1>"; ?>
                     <?php echo "<h4>Date : " . $vosdernierrapport[$i]->getdaterapport() . "</h4>"; ?>
                     <?php echo "<h4>Motif : " . $vosdernierrapport[$i]->getmotifrapport() . "</h4>"; ?>
                     <?php echo "<h4>Bilan : " . $vosdernierrapport[$i]->getbilanrapport() . "</h4>"; ?>
                     <?php echo "<h4>Id Visiteur : " . $vosdernierrapport[$i]->getidvisiteur() . "</h4>"; ?>
-                    <?php echo "<h4>Id Medecin : " . $vosdernierrapport[$i]->getidmedecin() . "</h4>"; ?>
+					<?php echo "<h4>Médecin : " . $medecin1->getnommedecin(). " ".$medecin1->getprenommedecin()."</h4>"; ?>
                     <?php echo "<a id='formbtt2' href='./?action=detailrapport&idrapport=" . $vosdernierrapport[$i]->getidrapport() . "'/>" ?>Modifier</a>
                 </div>
             <?php } ?>

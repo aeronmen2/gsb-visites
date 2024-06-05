@@ -6,6 +6,7 @@ include_once('famille.php');
 class familleDAO
 {
 
+        //récupérer les familles de médicaments
     static public function getFamilles()
     {
         $res = array();
@@ -25,9 +26,9 @@ class familleDAO
         return $res;
     }
 
-    static public function getFamilleID($idfamille)
+            //récupérer une famille avec son id
+    static public function getFamillebyID($idfamille)
     {
-
         $connect = connexionDAO::connexionPDO();
         $request = $connect->prepare("select * from famille where id = :idfamille ");
         $request->bindvalue(':famille', $idfamille, PDO::PARAM_STR);

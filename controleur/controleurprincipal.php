@@ -17,6 +17,7 @@ function controleurprincipal($action){
     $lesActions["modifrapport"] = "modifrapport.php";
     $lesActions["detailmedecin"] = "detailmedecin.php";
     $lesActions["modifmedecin"] = "modifmedecin.php";
+    $lesActions["rapportmedecin"] = "rapportmedecin.php";
     
 
     if (array_key_exists($action, $lesActions)) {
